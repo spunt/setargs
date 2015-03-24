@@ -1,39 +1,48 @@
 function argstruct = setargs(defaults, optargs)
-% SETARGS Name/value parsing and assignment of varargin with default values
-%
+% % SETARGS Name/value parsing and assignment of varargin with default values
+% 
 % This is a utility for setting the value of optional arguments to a
 % function. The first argument is required and should be a cell array of
 % "name, default value" pairs for all optional arguments. The second
 % argument is optional and should be a cell array of "name, custom value"
 % pairs for at least one of the optional arguments.
-%
+% 
 %  USAGE: argstruct = setargs(defaults, args)  
 % __________________________________________________________________________
 %  OUTPUT
-%
+% 
 % 	argstruct: structure containing the final argument values
 % __________________________________________________________________________
 %  INPUTS
-%
+% 
 % 	defaults:  
 %       cell array of "name, default value" pairs for all optional arguments
-%
+% 
 % 	optargs [optional]     
 %       cell array of "name, custom value" pairs for at least one of the
 %       optional arguments. this will typically be the "varargin" array. 
 % __________________________________________________________________________
 %  USAGE EXAMPLE (WITHIN FUNCTION)
+% 
+%     defaults    = {'arg1', 0, 'arg2', 'words', 'arg3', rand}; 
+%     argstruct   = setargs(defaults, varargin)
 %
-%     defaults    = {   'arg1',     0,      ...
-%                       'arg2',     'zero', ...    
-%                       'arg3',     rand    ...
-%                   };
-%     argstruct = setargs(defaults, varargin)
-%
+
 
 % ---------------------- Copyright (C) 2015 Bob Spunt ----------------------
 %	Created:  2015-03-11
 %	Email:    spunt@caltech.edu
+% 
+%   This program is free software: you can redistribute it and/or modify
+%   it under the terms of the GNU General Public License as published by
+%   the Free Software Foundation, either version 3 of the License, or (at
+%   your option) any later version.
+%       This program is distributed in the hope that it will be useful, but
+%   WITHOUT ANY WARRANTY; without even the implied warranty of
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%   General Public License for more details.
+%       You should have received a copy of the GNU General Public License
+%   along with this program.  If not, see: http://www.gnu.org/licenses/.
 % __________________________________________________________________________
 if nargin < 1, mfile_showhelp; return; end
 if nargin < 2, optargs = []; end

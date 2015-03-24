@@ -1,0 +1,21 @@
+
+
+
+
+
+    function myfunction(varargin)
+    defargs = {'arg1', 1, 'arg2', 0};
+    args = setargs(defargs, varargin); 
+
+
+
+
+
+
+
+
+
+
+
+
+a = args; 
