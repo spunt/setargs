@@ -1,5 +1,5 @@
 function argstruct = setargs(defaults, optargs)
-% % SETARGS Name/value parsing and assignment of varargin with default values
+% SETARGS Name/value parsing and assignment of varargin with default values
 % 
 % This is a utility for setting the value of optional arguments to a
 % function. The first argument is required and should be a cell array of
