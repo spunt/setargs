@@ -75,6 +75,7 @@ if ~isempty(varargs)
        end
     end
 end
+
 for i = 1:size(defaultargs,1), assignin('caller', defaultargs{i,1}, defaultargs{i,2}); end
 if nargout>0, argstruct = cell2struct(defaultargs(:,2), defaultargs(:,1)); end
 end
